@@ -1,3 +1,27 @@
+#!/user/bin/env python
+# -*- coding: utf-8 -*-
+# @Time    : 5/1/20 10:25 AM
+# @Author  : mouyan.wu
+# @Email   : mouyan.wu@gmail.com
+# @File    : day01_machine_learning.py
+# @Software: PyCharm
+
+# 特征提取
+# 1.导入包
+# 2.实例化
+# 3.转换数据
+# 4.打印结果
+
+# 代码1:字典抽取
+# 代码2：文本特征提取
+# 代码3：中文特征值化
+# 代码4：TF-IDF中文特征值化
+# 代码5：归一化处理,容易受粗差野值影响
+# 代码6：标准化处理
+# 代码7：缺失值处理
+# 代码8：过滤式特征选择
+# 代码9：主成分分析特征降维
+
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 import jieba
@@ -7,12 +31,6 @@ from sklearn.impute import SimpleImputer
 from sklearn.feature_selection import VarianceThreshold
 from sklearn.decomposition import PCA
 
-
-# 特征提取
-# 1.导入包
-# 2.实例化
-# 3.转换数据
-# 4.打印结果
 
 def dictvec():
     """
@@ -80,7 +98,7 @@ def chinese_vec():
 
 def tfidfvec():
     """
-    中文特征值化
+    TF-IDF中文特征值化
     :return: 
     """
     # 数据转化为字符串格式
@@ -151,6 +169,7 @@ def var():
     print(data)
     return None
 
+
 def pca():
     """
     PCA主成分分析特征降维
@@ -159,7 +178,7 @@ def pca():
     # 实例化
     pca = PCA(n_components=0.95)
     # 调用fit_transform
-    data = pca.fit_transform([[2,8,4,5],[6,3,0,8],[5,4,9,1]])
+    data = pca.fit_transform([[2, 8, 4, 5], [6, 3, 0, 8], [5, 4, 9, 1]])
     # 打印输出
     print(data)
     return None
