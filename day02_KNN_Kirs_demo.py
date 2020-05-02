@@ -3,7 +3,7 @@
 # @Time    : 5/1/20 10:25 PM
 # @Author  : mouyan.wu
 # @Email   : mouyan.wu@gmail.com
-# @File    : day02_machine_learning.py
+# @File    : day02_KNN_Kirs_demo.py
 # @Software: PyCharm
 
 # 代码1：利用KNN算法对莺尾草进行分类

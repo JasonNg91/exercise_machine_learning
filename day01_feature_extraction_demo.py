@@ -3,7 +3,7 @@
 # @Time    : 5/1/20 10:25 AM
 # @Author  : mouyan.wu
 # @Email   : mouyan.wu@gmail.com
-# @File    : day01_machine_learning.py
+# @File    : day01_feature_extraction_demo.py
 # @Software: PyCharm
 
 # 特征提取
