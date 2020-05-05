@@ -7,6 +7,9 @@
 # @Software: PyCharm
 
 # 代码：逻辑回归预测乳腺癌症
+# 准确率/召回率
+# ROC和AUC
+# 模型保存和加载
 
 import pandas as pd
 import numpy as np
@@ -14,6 +17,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, roc_auc_score
+from sklearn.externals import joblib
 
 
 def logistregression_cancer():
@@ -46,6 +50,12 @@ def logistregression_cancer():
     # 5.逻辑回归预估器
     estimator = LogisticRegression()
     estimator.fit(x_train, y_train)
+
+    # 保存模型
+    joblib.dump(estimator,"my_logistregression.pkl")
+
+    # 模型加载
+    # estimator = joblib.load("my_logistregression.pkl")
 
     # 6.得出模型
     print("回归系数\n", estimator.coef_)
